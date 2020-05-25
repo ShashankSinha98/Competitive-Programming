@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\sinha\Desktop\Luicifer\Study\Java\Competitive Programming\.metadata\.plugins\org.eclipse.jdt.core
+2524005488.index
+3924257938.index
