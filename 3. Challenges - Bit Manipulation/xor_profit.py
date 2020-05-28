@@ -1,5 +1,6 @@
-a = int(input())
-b = int(input())
+input_arr = [int(i) for i in input().split()]
+a,b = input_arr
+
 
 def dec_to_bin(N):
     res=[0]*64

@@ -12,3 +12,4 @@ def bin_to_dec(bin):
 
 print(bin_to_dec("1101100"))
 #89
+#108

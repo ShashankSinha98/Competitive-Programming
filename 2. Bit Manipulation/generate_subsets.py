@@ -20,6 +20,6 @@ def generate_subsets(string):
     
     return res
 
-print(generate_subsets("abc"))
+print(generate_subsets("abcd"))
 
         
