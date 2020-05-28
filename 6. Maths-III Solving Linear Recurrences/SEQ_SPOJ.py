@@ -1,6 +1,7 @@
+# Causing TLE on SPOJ
 t = int(input())
 
-for i in range(1):
+for i in range(t):
     
     k = int(input())
     b = [int(i) for i in input().split()]
