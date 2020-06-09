@@ -31,7 +31,8 @@ for i in range(t):
         if n&1:
             return multiply(T,power(T,n-1))
 
-        return multiply(power(T,n//2),power(T,n//2))
+        X = power(T,n//2)
+        return multiply(X,X)
 
     #print(power([[1,2],[3,4]],10,2))
 
@@ -78,7 +79,7 @@ for i in range(t):
         print(res)
 
 
-    print(compute(k,b,c,n))
+    compute(k,b,c,n)
 
 
 
