@@ -1,3 +1,5 @@
+// Accepted on Spoj :D
+
 import java.util.*;
 import java.lang.*;
 public class SEQ_Spoj {
