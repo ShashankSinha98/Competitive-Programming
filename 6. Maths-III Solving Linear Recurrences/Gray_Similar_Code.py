@@ -1,48 +1,15 @@
-# Not accepted on codechef 
-def binary_search(a,x):
-
-    left = 0
-    right = len(a)-1
-
-    while(left<=right):
-        mid = (left+right)//2
-
-        if a[mid] == x:
-            return True
-        
-        elif a[mid] > x:
-            right = mid-1
-        else:
-            left = mid+1
-
-    return False
-
-def search(a,x,i,j,k):
-    a.remove(a[i])
-    a.remove(a[j])
-    a.remove(a[k])
-
-    print(a)
-
-    for i in a:
-        if i == x:
-            return True
-    return False
-
-
+# Accepted on Codechef
 def compute(a):
     n = len(a)
     res = "No"
     for i in range(n):
         for j in range(i+1,n):
             for k in range(j+1,n):
-                temp = (a[i]^a[j]^a[k])
-                #print(temp)
-
-                if search(a,temp,i,j,k) == True:
-                    res = "Yes"
-                    #print(res)
-                    return res
+                for l in range(k+1,n):
+                    if (a[i]^a[j]^a[k]^a[l]) == 0:
+                        res = "Yes"
+                        #print(res)
+                        return res
     return res
 
 
@@ -53,8 +20,6 @@ a = [int(i) for i in input().split()]
 if n >= 130:
     print("Yes")
 else:
-    a.sort()
-    #print(a)
     print(compute(a))
 
 
