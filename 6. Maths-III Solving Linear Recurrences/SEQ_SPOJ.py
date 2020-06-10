@@ -10,6 +10,8 @@ for i in range(t):
 
     MOD = 1000000000
 
+    compute(k,b,c,n)
+
     def multiply(A,B):
         
         res = [[0]*k for i in range(k)]
@@ -64,14 +66,6 @@ for i in range(t):
 
         T_pow = power(T,n-1)
 
-        #res = [0]*k
-
-        #for i in range(k):
-        #    temp = 0
-        #    for x in range(k):
-        #        temp = (temp + (T_pow[i][x]*b[x])%MOD)%MOD
-        #    res[i] = temp
-
         res = 0
         for i in range(k):
             res = (res + (T_pow[0][i]*b[i])%MOD)%MOD
@@ -79,7 +73,7 @@ for i in range(t):
         print(res)
 
 
-    compute(k,b,c,n)
+    
 
 
 
