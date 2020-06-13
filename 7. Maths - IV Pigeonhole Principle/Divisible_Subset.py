@@ -13,7 +13,7 @@ while(t!=0):
         curr_sum+=i
         cumm_sum.append((curr_sum+n) % n)
 
-    #print(cumm_sum)
+    print(cumm_sum)
 
     index_arr = [[] for i in range(n)]
     
@@ -23,7 +23,7 @@ while(t!=0):
     for i in range(n):
         index_arr[cumm_sum[i]].append(i)
 
-    #print(index_arr)
+    print(index_arr)
 
     if len(index_arr[0])>=1:
         print(index_arr[0][0]+1)

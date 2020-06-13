@@ -16,12 +16,17 @@ while(t!=0):
 
     count_arr = [0 for i in range(n)]
     
-    count_arr[0] = 1 # bcz of null subarr in beginning
+    #count_arr[0] = 1 # bcz of null subarr in beginning
 
     for i in cumm_sum:
         count_arr[i]+=1
 
+    #print(count_arr)
+
     res = 0
+    if count_arr[0]>=1:
+        res+=count_arr[0]
+
     for i in count_arr:
         res += (((i)*(i-1))//2)
 
