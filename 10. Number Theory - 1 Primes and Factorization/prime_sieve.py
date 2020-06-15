@@ -12,7 +12,7 @@ def prime_sieve(n):
 
     for i in range(3,n,2):
         if arr[i] == 1:
-            for j in range(i*i,n+1,i):
+            for j in range(i*i,n+1,2*i):
                 arr[j] = 0
 
     return arr

@@ -1,4 +1,4 @@
-# Not accepted on codechef 
+ 
 def binary_search(a,x):
 
     left = 0
