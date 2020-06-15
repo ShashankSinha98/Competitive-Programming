@@ -1,13 +1,13 @@
-# Accepted on Hacker blocks, giving RTE on test case 6 on Codeforces
+# Accepted on Hacker blocks and on Codeforces
 
-lim = 10**6
+lim = 10**7
 last_occ = [ 0 for i in range(lim)]
 
 n = int(input())
 ans = [0 for i in range(n+1)]
 
 arr = [int(i) for i in input().split()]
-arr.insert(0,0)
+arr.insert(0,0 )
 #print("arr",arr)
 
 for i in range(1,n+1):
