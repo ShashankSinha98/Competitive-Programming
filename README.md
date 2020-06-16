@@ -3,7 +3,7 @@ This repo contains topic-wise codes of online competitive programming course fro
 It contains solution to various problems from hacker blocks, SPOJ, codechef, codeforces etc.
 
 ## Statistics - 
- ### Codeforces - 5 
+ ### 1. Codeforces -  
 - Tavas and Sadas
 - Random Query
 - Product of three numbers
@@ -12,7 +12,7 @@ It contains solution to various problems from hacker blocks, SPOJ, codechef, cod
 
 <br />
 
- ### SPOJ - 4 
+ ### 2. SPOJ -  
  - Julka
  - SEQ
  - Favourite Dice
@@ -20,7 +20,7 @@ It contains solution to various problems from hacker blocks, SPOJ, codechef, cod
 
 <br />
 
-### Codechef - 3 
+### 3. Codechef -  
 - Gray Similar Code
 - Divisible Subset
 - Marbles
