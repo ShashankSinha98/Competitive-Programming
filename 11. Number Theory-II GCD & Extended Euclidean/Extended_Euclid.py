@@ -19,5 +19,5 @@ def ExtendedEuclid(a,b):
     x = cX
     y = cY
 
-ExtendedEuclid(18,30)
+ExtendedEuclid(15,25)
 print(x,y,GCD)
