@@ -9,6 +9,7 @@ It contains solution to various problems from hacker blocks, SPOJ, codechef, cod
 - Product of three numbers
 - Almost Primes
 - Yet Another Counting Problem
+- Coprime Subsequences
 
 <br />
 
