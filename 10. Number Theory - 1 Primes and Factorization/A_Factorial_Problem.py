@@ -10,7 +10,7 @@ t = int(input())
 
 while(t!=0):
     t-=1
-
+ 
     n,k = [int(i) for i in input().split()]
 
     ans = MAX_VALUE
