@@ -1,18 +1,16 @@
 import sys
 x = sys.maxsize
 y = sys.maxsize
-GCD = sys.maxsize
 
 def GCD(a,b):
     return a if b==0 else GCD(b,a%b)
 
 def ExtendedEuclid(a,b):
-    global x, y, GCD
+    global x, y
 
     if b==0:
         x=1
         y=0
-        GCD = a
         return
 
     ExtendedEuclid(b,a%b)
@@ -30,4 +28,15 @@ def invModulo(a,m):
         return (x+m)%m
 
 
-print(invModulo(2,1000000007))
+MOD = 1000000007
+n,r = [int(i) for i in input().split()]
+
+if r > n-r:
+    r = n-r 
+
+ans = 1
+for i in range(r):
+    ans = (ans* (n-i))%MOD
+    ans = (ans * invModulo((r-i),MOD))%MOD
+
+print(round(ans))
