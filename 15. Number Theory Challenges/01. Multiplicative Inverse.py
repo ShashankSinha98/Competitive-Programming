@@ -7,7 +7,7 @@ def GCD(a,b):
 
 def ExtendedEuclid(a,b):
     global x,y
-
+    
     if b==0:
         x = 1
         y = 0
@@ -19,7 +19,6 @@ def ExtendedEuclid(a,b):
     
     x = cX
     y = cY
-
 
 
 
