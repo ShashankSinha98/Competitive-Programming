@@ -10,6 +10,7 @@ It contains solution to various problems from hacker blocks, SPOJ, codechef, cod
 - Almost Primes
 - Yet Another Counting Problem
 - Coprime Subsequences
+- The Football Season(1244C)
 
 <br />
 
