@@ -36,7 +36,7 @@ def Calculate_Mobius(N):
 
 # Caluclating Mobius values for nos' till 10^5
 mobius = Calculate_Mobius(N)
-n = int(input())
+n = int(input()) 
 b = [int(i) for i in input().split()]
 
 # Storing freq of I/p no.s in array  
