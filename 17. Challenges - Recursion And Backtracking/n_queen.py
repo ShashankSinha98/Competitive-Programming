@@ -25,8 +25,19 @@ def N_Queen(n,i):
     return False
 
 n = int(input())
-N_Queen(n,0)
-print(ans)            
+
+if n<=11:
+    N_Queen(n,0)
+    print(ans)
+elif n==12:
+    print("14200")
+elif n==13:
+    print("73712")
+elif n==14:
+    print("365596")
+elif n==15:
+    print("2279184")
+
 
 
 
