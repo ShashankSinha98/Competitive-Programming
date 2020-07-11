@@ -13,10 +13,7 @@ def merge_sort(arr,n):
 
 def merge(left,right):
 
-    ls = 0
     le = len(left)-1
-
-    rs = 0
     re = len(right)-1
 
     karr = []
