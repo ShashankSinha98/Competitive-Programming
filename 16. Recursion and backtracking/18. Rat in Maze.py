@@ -2,7 +2,11 @@ def find_paths(maze,out,i,j,m,n):
 
     if i==m and j==n:
         out[i][j] = 1
-        print(out)
+        for i in range(m+1):
+            for j in range(n+1):
+                print(out[i][j],end=" ")
+            print()
+        print()
         return True
 
     if i>m or j>n:
@@ -21,6 +25,8 @@ def find_paths(maze,out,i,j,m,n):
     if leftPath or rightPath:
         return True
 
+    
+
     return False
 
 
@@ -28,7 +34,7 @@ maze = [
     [0,0,0,0],
     [0,1,0,0],
     [0,0,0,1],
-    [1,0,0,0]
+    [1,0,0,0] 
 ]
 
 out = [[0]*len(maze) for i in range(len(maze))]

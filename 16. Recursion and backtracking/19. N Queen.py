@@ -88,7 +88,7 @@ def is_safe(board,i,j,n):
 
     
 n = int(input())
-LIM = 15
+LIM = 100
 col = [0 for i in range(LIM)]
 left_diag = [0 for i in range(LIM)]
 right_diag = [0 for i in range(LIM)]

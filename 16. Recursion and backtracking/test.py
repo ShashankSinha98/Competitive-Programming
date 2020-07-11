@@ -1,35 +1,33 @@
-ans = 0
-LIM = 100
-col = [0 for i in range(LIM)]
-left_diag = [0 for i in range(LIM)]
-right_diag = [0 for i in range(LIM)]
+arr = [5,4,3,2,1]
 
-def N_Queen(n,i):
-    global ans
+def quick_sort(arr,st,end):
 
-    if i==n:
-        ans+=1
-        return False
+    if st>=end:
+        return
 
-    for j in range(0,n):
-        if col[j]==0 and left_diag[i-j+n]==0 and right_diag[i+j]==0:
-            col[j] = left_diag[i-j+n] = right_diag[i+j] = 1
+    p = partition(arr,st,end)
 
-            can_keep_queen_here = N_Queen(n,i+1)
-
-            if can_keep_queen_here:
-                return True
-
-            col[j] = left_diag[i-j+n] = right_diag[i+j] = 0
-
-    return False
-
-n = int(input())
-N_Queen(n,0)
-print(ans)            
+    quick_sort(arr,st,p-1)
+    quick_sort(arr,p+1,end)
 
 
+def partition(arr,st,end):
 
-    
+    p = arr[end]
+    i = st-1
 
-    
+    for j in range(st,end):
+
+        if arr[j] <= p:
+            i+=1
+            arr[i],arr[j] = arr[j],arr[i]
+
+    arr[i+1],arr[end] = arr[end],arr[i+1]
+
+    return i+1
+
+        
+
+quick_sort(arr,0,len(arr)-1)
+
+print(arr)

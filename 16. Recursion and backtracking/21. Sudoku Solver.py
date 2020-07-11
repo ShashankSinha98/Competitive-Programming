@@ -5,7 +5,7 @@ def sudoku_solver(sudoku,i,j,n):
             for j in range(0,n):
                 print(sudoku[i][j],end=" ")
             print()
-        return True
+        return False
 
     if j>=n:
         return sudoku_solver(sudoku,i+1,0,n)
