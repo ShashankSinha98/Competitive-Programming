@@ -12,7 +12,7 @@ def find(arr,k):
 
         elif arr[st]<=arr[mid]:
 
-            if arr[st]<= k <= arr[end]:
+            if arr[st]<= k <= arr[mid]:
                 end = mid-1
             else:
                 st = mid+1
