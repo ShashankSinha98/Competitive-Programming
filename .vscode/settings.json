@@ -1,3 +1,4 @@
 {
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "python.pythonPath": "C:\\Users\\sinha\\anaconda3\\envs\\env_dlib\\python.exe"
 }
