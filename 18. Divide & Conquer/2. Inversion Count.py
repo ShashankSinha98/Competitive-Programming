@@ -48,4 +48,5 @@ while t!=0:
 
     ans, sorted_arr = inversion_count(arr)
     print(ans)
+    print(sorted_arr)
 
