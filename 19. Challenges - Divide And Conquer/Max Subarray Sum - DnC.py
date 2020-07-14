@@ -41,20 +41,6 @@ def maxSubArr(arr,st,end):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 t = int(input())
 
 while t!=0:
