@@ -36,16 +36,6 @@ def cross_alpha_score(left,right):
 
         
 
-def sub_sum(arr,i,j):
-
-    res = 0
-    for k in range(i,j+1):
-        res=(res+arr[k])%MOD
-
-    return res%MOD
-
-
-
 
 def alpha_score(arr,st,end):
 

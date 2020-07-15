@@ -32,3 +32,5 @@ while t!=0:
 
     a,b = pairs(arr,n,M)
     print("Deepak should buy roses whose prices are %d and %d."%(a,b))
+
+    input()
