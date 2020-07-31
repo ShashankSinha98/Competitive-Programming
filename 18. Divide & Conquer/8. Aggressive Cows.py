@@ -1,16 +1,16 @@
 # Accepted on SPOJ
-
+ 
 def canPlaceCow(arr,n,c,min_sep):
 
-    cnt = 1
+    cnt = 1 # Placed cow in first stall
     lastCowBarn = arr[0]
 
     for i in range(1,n):
-        if arr[i] - lastCowBarn >= min_sep:
-            cnt+=1
-            lastCowBarn = arr[i]
+        if arr[i] - lastCowBarn >= min_sep: # Cow can be placed at this  stall
+            cnt+=1 
+            lastCowBarn = arr[i] # updating last barn pos
 
-            if cnt == c:
+            if cnt == c: # Successfully places all cows at given min sep
                 return True
 
     return False
@@ -33,7 +33,7 @@ def min_dist(arr,n,c):
 
         if cowsRakhPaye:
             st = mid+1
-            ans = mid
+            ans = max(mid,ans)
 
         else:
             end = mid-1

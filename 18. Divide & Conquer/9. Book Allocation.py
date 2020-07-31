@@ -26,11 +26,9 @@ def solve(arr,N,M):
     ans = sys.maxsize
 
     while(st<=end):
-
         mid = (st+end)//2
 
         minPageHoPaye = minPagePossible(arr,N,M,mid) 
-
         if minPageHoPaye:
             end = mid-1
             ans = min(mid,ans)
