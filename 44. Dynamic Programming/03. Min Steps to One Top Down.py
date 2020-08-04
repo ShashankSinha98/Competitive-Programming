@@ -1,26 +1,29 @@
-import sys
-LIM=100
-dp = [0 for i in range(LIM)]
 
-def solve(num):
+import sys
+
+def solve(n: int):
     global dp
 
-    if num==1:
+    if n==1:
         return 0
 
-    if dp[num]!=0:
-        return dp[num]
+    if dp[n]!=0:
+        return dp[n]
+
+    x = y = z = sys.maxsize
+
+    if n%3==0:
+        x = dp[n//3] if dp[n//3]!=0 else solve(n//3)
     
-    x = solve(num//3) if num%3==0 else sys.maxsize
-    y = solve(num//2) if num%2==0 else sys.maxsize
-    z = solve(num-1)
+    if n%2==0: 
+        y = dp[n//2] if dp[n//2]!=0 else solve(n//2)
 
-    dp[num] = min(x,y,z) + 1
-    return dp[num]
+    z = dp[n-1] if dp[n-1]!=0 else solve(n-1)
 
+    ans = min(x,y,z)+1
+    dp[n] = ans
+    return dp[n]
 
-
-num = int(input())
-print(solve(num))
-#print(dp)
-
+n = int(input())
+dp = [0]*(n+1)
+print(solve(n))
