@@ -32,7 +32,7 @@ def solve_dp(arr,n,w):
             else:
                 dp[i][wj] = dp[i-1][wj]
             
-    print(dp)
+    #print(dp)
     return dp[n][w]
 
 print(solve_dp(inp_arr,n,w))

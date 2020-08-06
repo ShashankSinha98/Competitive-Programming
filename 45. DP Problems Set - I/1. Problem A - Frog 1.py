@@ -11,7 +11,7 @@ def solve(arr,n):
             dp[i] = min(abs(arr[i]-arr[i-1])+dp[i-1],abs(arr[i]-arr[i-2])+dp[i-2])
         else:
             dp[i] = abs(arr[i]-arr[i-1])
-    print(dp)
+    #print(dp)
     return dp[-1]
 
 print(solve(arr,n))
