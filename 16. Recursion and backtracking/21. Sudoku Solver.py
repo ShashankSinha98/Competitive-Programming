@@ -20,10 +20,12 @@ def sudoku_solver(sudoku,i,j,n):
 
             can_sudoku_solve = sudoku_solver(sudoku,i,j+1,n)
 
+            sudoku[i][j] = 0
+
             if can_sudoku_solve:
                 return True
     
-    sudoku[i][j] = 0
+    #sudoku[i][j] = 0
 
     return False
 

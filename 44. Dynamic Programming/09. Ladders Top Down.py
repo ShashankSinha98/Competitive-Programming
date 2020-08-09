@@ -11,8 +11,8 @@ def solve(n,k):
     ans = 0
     for i in range(1,k+1):
         if n-i>=0:
-            ans += dp[n-i] if dp[n-i] !=0 else solve(n-i,k)
+            ans += solve(n-i,k)
     dp[n] = ans
-    return dp[n]
+    return dp[n]    
 
 print(solve(4,3))

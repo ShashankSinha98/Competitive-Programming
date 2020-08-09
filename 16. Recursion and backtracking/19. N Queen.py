@@ -23,10 +23,12 @@ def n_queen(board,i,n):
 
             thisQueenPosIsValid = n_queen(board,i+1,n)
 
+            board[i][j] = 0
+
             if thisQueenPosIsValid:
                 return True
         
-            board[i][j] = 0
+            #board[i][j] = 0
 
             unset_storage(board,i,j,n)
             #print_storage("C, j: "+str(j)+", i: "+str(i))
