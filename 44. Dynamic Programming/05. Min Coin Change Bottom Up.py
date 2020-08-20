@@ -1,10 +1,8 @@
 import sys
-LIM = 10**3
-dp = [0 for i in range(LIM)]
-coins = [1,7,10]
+LIM = 10**4
 
 def solve(val):
-    global dp
+    global dp, coins
 
     for i in range(1,val+1):
         temp = sys.maxsize
@@ -13,8 +11,11 @@ def solve(val):
                 temp = min(dp[i-c],temp)
         dp[i] = temp+1
         
+    print(dp)
     return dp[val]
 
 
 n = int(input())
+coins = [int(i) for i in input().split()]
+dp = [0 for i in range(n+1)]
 print(solve(n))

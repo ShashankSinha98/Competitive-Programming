@@ -15,8 +15,6 @@ def solve_recc(arr,n,w):
     if arr[n-1][0]>w:
         return solve_recc(arr,n-1,w)
     
-
-
     return max(solve_recc(arr,n-1,w), arr[n-1][1]+solve_recc(arr,n-1,w-arr[n-1][0]))
 
    
