@@ -1,28 +1,46 @@
-def is_cycle(node,visited,parent,flip):
-    global arr,n
-
-    visited[node] = flip
-    flip = (flip+1)%2
-    
-    subarr = arr[node]
-    for c in range(n):
-        if subarr[c]==1 and visited[c]==0:
-            return is_cycle(c,visited,node,flip)
-        elif subarr[c]==1 and c!=parent:
-            if visited[c]==visited[node]:
-                return False
-            
+def isBipertite(arr, n):
+    # Code here
+    for i in range(n):
+        ans = check(arr,n,i)
+        if not ans:
+            return False
     return True
         
 
+def check(arr,n,src):
+    
+    
+    color = [-1]*n
+    color[src] = 1
+    
+    queue = []
+    queue.append(src)
+    
+    while len(queue)!=0:
+        
+        u = queue.pop()
+        
+        if arr[u][u]==1:
+            return False
+            
+        for i in range(n):
+            
+            if arr[u][i]==1 and color[i]==-1:
+                color[i] = (color[u]+1)%2
+                queue.append(i)
+            
+            elif arr[u][i]==1 and color[i]==color[u]:
+                return False
+                
+    return True
 
 
-def is_bipartite(arr):
-    visited = [0]*len(arr)
-    return is_cycle(0,visited,-1,1)
+graph = [[0, 1, 0, 1], 
+            [1, 0, 1, 0], 
+            [0, 1, 0, 1], 
+            [1, 0, 1, 0] 
+            ] 
+
+print(isBipertite(graph,4))
 
 
-
-n = 3
-arr = [[0, 1, 0],[0, 0, 1], [1, 0, 0]]
-print(is_bipartite(arr))
