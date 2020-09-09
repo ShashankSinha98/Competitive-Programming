@@ -74,7 +74,7 @@ public class Topological_Sort_Using_DFS {
 		nodes.add("Dataset");
 		nodes.add("Face Recognition");
 		
-		Graph g = new Topological_Sort_Using_DFS().new Graph(7,nodes);
+		Graph g = new Topological_Sort_Using_DFS().new Graph(nodes.size(),nodes);
 		
 		
 		
