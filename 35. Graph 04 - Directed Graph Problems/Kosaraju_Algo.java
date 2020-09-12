@@ -68,9 +68,10 @@ public class Kosaraju_Algo {
 			for (int c : this.graph.get(node)) {
 				if (visited[c] == 0) {
 					dfs_helper(c, visited, st);
-					st.add(c);
+					
 				}
 			}
+			st.add(node);
 		}
 
 	}

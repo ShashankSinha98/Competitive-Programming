@@ -23,7 +23,7 @@ public class Disjoint_Set_Union {
 			
 			if(this.parent[x]==x)
 				return x;
-			
+			// Path Compression
 			else return parent[x] = get_superparent(parent[x]);
 		}
 		
@@ -33,6 +33,7 @@ public class Disjoint_Set_Union {
 			if(superparent_x != superparent_y) {
 				this.parent[superparent_x] = superparent_y;
 				this.noOfComponents-=1;
+				// x is connected to y, so size of SP of x = 0 and size of SP y += size(SP x)
 				this.size[superparent_y] += this.size[superparent_x];
 				this.size[superparent_x] = 0;
 			}
@@ -68,7 +69,9 @@ public class Disjoint_Set_Union {
 		
 		int ans = 0;
 		for(int i=0;i<N; i++) {
-			int superparent_i = g.get_superparent(i);
+			int superparent_i = g.get_superparent(i); 
+			// g.size[superparent_i] gives size of that connected comp, so n- g.size[superparent_i] will give no of nodes
+			// which are in diff comp.
 			ans+=(N-g.size[superparent_i]);
 		}
 		//g.display_arr(g.size);
