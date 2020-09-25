@@ -11,8 +11,9 @@ def cal_hash(inp_str):
     return res
 
 def rolling_hash(inp_str,old_hash,i,m):
+    
 
-    old_hash -= ord(inp_str[i])
+    old_hash -= ord(inp_str[i-1])
     old_hash = old_hash//PRIME
     old_hash += (ord(inp_str[i+m-1])*(PRIME**(m-1)))
 
@@ -25,7 +26,7 @@ def count_occurence(inp_str, pattern):
     m = len(pattern)
 
     pattern_hash = cal_hash(pattern)
-    input_hash = cal_hash(pattern[0:m])
+    input_hash = cal_hash(inp_str[0:m])
 
     cnt = 0
     if pattern_hash == input_hash and check(inp_str,pattern,0):
@@ -52,4 +53,6 @@ def check(inp_str,pattern,idx):
 inp_str = input()
 pattern = input()
 
+#x = cal_hash("abc")
+#print(rolling_hash("abcd",x,1,3))
 print(count_occurence(inp_str,pattern))
