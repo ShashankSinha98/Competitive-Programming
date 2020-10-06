@@ -4,7 +4,8 @@ class Solution:
     visited = set()
 
     def longestConsecutive(self,nums) -> int:
-
+        self.mySet = set()
+        self.visited = set()
         for i in nums:
             self.mySet.add(i)
 
@@ -14,6 +15,7 @@ class Solution:
                 maxCnt = max(maxCnt,self.helper(i))
         
         return maxCnt
+
 
 
 
@@ -30,7 +32,12 @@ class Solution:
         return self.helper(i+1)+self.helper(i-1)+1
 
 
+t = int(input())
+while t!=0:
+    t-=1
 
-arr = [1, 9, 3, 10, 4, 20, 2]
-ans = Solution().longestConsecutive(arr)
-print(ans)
+    n = int(input())
+    arr = [int(i) for i in input().split()]
+
+    ans = Solution().longestConsecutive(arr)
+    print(ans)
