@@ -11,7 +11,7 @@ class Soln:
             cumm[i] = cumm[i-1] + arr[i-1]
             mydict[cumm[i]] = i
 
-        print(mydict)
+        #print(mydict)
 
         for i in range(0,n+1):
             key = cumm[i]+k
